@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 20px;
+}
 
 .landing-wrapper {
   display: flex;
@@ -19,7 +23,7 @@
 .main-landing {
   background-color: #f9e7d8;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
@@ -28,7 +32,7 @@
   width: 80%;
 }
 
-img {
+#logo-img {
   width: 100%;
 }
 
@@ -36,20 +40,53 @@ img {
   background: url('./images/babyumms-content.jpg');
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mc_embed_signup label {
+  font-size: 20px !important;
+  color: #efc4a1;
+  width: 100% !important;
 }
 
 #mc_embed_signup {
-  background: transparent;
+  background: #f9e7d8ec;
   clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
+  padding: 12px;
   width: 80%;
+  margin-top: 26%;
+}
+
+#mce-EMAIL::-webkit-input-placeholder {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#mce-EMAIL:-ms-input-placeholder {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#mce-EMAIL:-moz-placeholder {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#mce-EMAIL::-moz-placeholder {
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 #mc-embedded-subscribe {
   background-color: #efc4a1 !important;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
+  .main-landing {
+  }
+
+  .logo-wrapper {
+    width: 100%;
+  }
+
   .main-landing,
   .signup-form {
     width: 100%;
