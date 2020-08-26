@@ -30,10 +30,16 @@ body {
 
 .logo-wrapper {
   width: 80%;
+  animation: FadeFromBottom 3s;
+  position: relative;
 }
 
 #logo-img {
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .signup-form {
@@ -43,6 +49,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 #mc_embed_signup label {
   font-size: 20px !important;
@@ -50,12 +57,62 @@ body {
   width: 100% !important;
 }
 
+@keyframes FadeFromRight {
+  from {
+    opacity: 0;
+    left: 100px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+@keyframes FadeFromLeft {
+  from {
+    opacity: 0;
+    left: -100px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+@keyframes FadeFromTop {
+  from {
+    opacity: 0;
+    top: -100px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes FadeFromBottom {
+  from {
+    opacity: 0;
+    top: 100px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
 #mc_embed_signup {
   background: #f9e7d8ec;
   clear: left;
   padding: 12px;
   width: 80%;
-  margin-top: 26%;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  animation: FadeFromTop 3s;
+  position: relative;
+}
+
+#mce-EMAIL {
+  width: 90%;
 }
 
 #mce-EMAIL::-webkit-input-placeholder {
@@ -77,10 +134,31 @@ body {
 #mc-embedded-subscribe {
   background-color: #efc4a1 !important;
   font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+
+.clear {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.countdown-timer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-timer div {
+  padding: 10px;
 }
 
 @media only screen and (max-width: 768px) {
   .main-landing {
+    display: none;
   }
 
   .logo-wrapper {
@@ -90,5 +168,21 @@ body {
   .main-landing,
   .signup-form {
     width: 100%;
+  }
+
+  .signup-form {
+    justify-content: center;
+    padding-bottom: 50%;
+  }
+
+  .hidden {
+    display: block;
+    position: relative;
+    animation: FadeFromLeft 2s;
+  }
+
+  #mc_embed_signup {
+    margin-top: 30px;
+    animation: FadeFromRight 2s;
   }
 }
