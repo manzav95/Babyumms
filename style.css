@@ -157,6 +157,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+
   .main-landing {
     display: none;
   }
@@ -184,5 +188,12 @@ body {
   #mc_embed_signup {
     margin-top: 30px;
     animation: FadeFromRight 2s;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .signup-form {
+    justify-content: flex-start;
+    padding-top: 23%;
   }
 }
